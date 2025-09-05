@@ -22,7 +22,7 @@ const page = () => {
     return (
         <div className='max-h-screen flex'>
             <LeftSidebar />
-            <Feed />
+            <Feed userData={userData} />
             <Rightbar />
         </div>
     )

@@ -1,5 +1,5 @@
 import express from "express";
-import { get_current_user } from "../controllers/user.controller.js";
+import { get_current_user ,} from "../controllers/user.controller.js";
 import verifyToken from "../middlewares/verifyToken.js";
 
 const user_router = express.Router()

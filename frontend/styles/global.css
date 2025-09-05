@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* small helper styles */
+:root {
+  --card-bg: rgba(255,255,255,0.08);
+  --card-border: rgba(255,255,255,0.10);
+}
+
+/* glass card */
+.glass {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(6px);
+}
+
+/* nice rounded images */
+.img-round {
+  border-radius: 9999px;
+}
+
+/* subtle scrollbar for desktop */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.25);
+  border-radius: 9999px;
+}

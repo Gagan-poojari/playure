@@ -28,3 +28,14 @@ body {
   font-style: normal;
   font-weight: 900;
 }
+.product-box{
+  height: 400px;
+  width:350px;
+  background-color:#f3f3f3;
+  border:2px solid hsla(252, 38%, 97%, 0.705);
+  box-shadow:  10px 10px 30px rgba(0, 0, 0, 0.493),inset -10px -10px 30px rgba(255, 255, 255, 0.352);
+  margin:10px;
+  border-radius:20px;
+  padding: 2px;
+  
+}

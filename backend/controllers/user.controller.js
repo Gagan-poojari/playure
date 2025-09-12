@@ -12,3 +12,4 @@ export const get_current_user = async (req, res) => {
         return res.status(500).json({ message: 'Error fetching user', error: error.message });
     }
 }
+

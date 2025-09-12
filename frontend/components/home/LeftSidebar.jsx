@@ -3,6 +3,9 @@ import { useState } from "react";
 import { FaHome, FaUsers, FaShoppingCart, FaTrophy } from "react-icons/fa";
 import { MdGroupAdd, MdNotifications, MdSettings } from "react-icons/md";
 
+
+
+
 const navItems = [
     { label: "Home", icon: <FaHome />, count: null },
     { label: "Collaborate", icon: <FaUsers />, count: "12" },
@@ -18,9 +21,9 @@ const LeftSidebar = () => {
         <div className="w-80 h-screen bg-white border-r border-gray-200 p-8 flex flex-col shadow-sm">
 
             {/* Logo */}
-            <div className="mb-5">
+            <div  className="mb-5">
                 <div className="flex items-center gap-4 mb-2">
-                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center rotate-3 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-400 shadow-md shadow-blue-200/40">
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center rotate-3 bg-gradient-to-br from-blue-800 via-blue-600 to-blue-400 shadow-md shadow-blue-200/40" >
                         <span className="text-white font-light text-xl -rotate-3">P</span>
                     </div>
                     <h1 className="text-3xl font-light text-gray-900 tracking-wide">Playure</h1>

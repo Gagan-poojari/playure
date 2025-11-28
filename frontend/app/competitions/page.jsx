@@ -1,5 +1,5 @@
 import React from "react";
-import Competitions from "@/components/upcomingEvent/Competitions";
+import Competitions from "@/components/competitions/Competitions";
 
 export default function Page() {
   return (

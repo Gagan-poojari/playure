@@ -1,7 +1,7 @@
 "use client";
 
-import SportsGearHero from "@/components/ecommercepage/SportsGearHero";
-import Product from "@/components/ecommercepage/Product";
+import SportsGearHero from "@/components/shop/SportsGearHero";
+import Product from "@/components/shop/Product";
 import { useState } from "react";
 
 export default function Home() {

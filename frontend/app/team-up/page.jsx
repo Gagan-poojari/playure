@@ -1,6 +1,6 @@
 // app/findfriends/page.jsx
-import FriendsHeader from "@/components/findfriends/FriendsHeader";
-import SuggestedList from "@/components/findfriends/SuggestedList";
+import FriendsHeader from "@/components/find-friends/FriendsHeader";
+import SuggestedList from "@/components/find-friends/SuggestedList";
 
 export default function FindFriendsPage() {
   return (

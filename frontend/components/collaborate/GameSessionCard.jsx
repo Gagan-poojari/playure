@@ -7,7 +7,7 @@ import { easeIn, easeOut, motion, scale } from "framer-motion";
 
 export default function GameSessionCard() {
   return (
-    <motion.div initial={{scale:1}} whileHover={{scale:1.1}} transition={{ease:easeOut}} className="bg-neutral-900/30 text-white rounded-xl shadow-lg p-5 w-full max-w-3xl mx-auto border border-neutral-800 backdrop-blur-2xl">
+    <motion.div initial={{scale:1}} transition={{ease:easeOut}} className="bg-neutral-900/30 text-white rounded-xl shadow-lg p-5 w-full max-w-3xl mx-auto border border-neutral-800 backdrop-blur-2xl">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div className="flex items-center gap-2">

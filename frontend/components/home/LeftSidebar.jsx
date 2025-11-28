@@ -1,14 +1,15 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { FaHome, FaUsers, FaShoppingCart, FaTrophy } from "react-icons/fa";
 import { MdGroupAdd, MdNotifications, MdSettings } from "react-icons/md";
 
 const navItems = [
-    { label: "Home", icon: <FaHome />, count: null },
-    { label: "Collaborate", icon: <FaUsers />, count: "12" },
-    { label: "Shopping", icon: <FaShoppingCart />, count: null },
-    { label: "Competitions", icon: <FaTrophy />, count: "3" },
-    { label: "Team Up", icon: <MdGroupAdd />, count: null },
+    { label: "Home", icon: <FaHome />, count: null, href: "/" },
+    { label: "Collaborate", icon: <FaUsers />, count: "12", href: "/collaborate" },
+    { label: "Shopping", icon: <FaShoppingCart />, count: null, href: "/shop" },
+    { label: "Competitions", icon: <FaTrophy />, count: "3", href: "/competitions" },
+    { label: "Team Up", icon: <MdGroupAdd />, count: null, href: "/team-up" },
 ];
 
 const LeftSidebar = () => {
@@ -30,29 +31,31 @@ const LeftSidebar = () => {
             {/* Navigation */}
             <nav className="flex flex-col gap-2 mb-8">
                 {navItems.map((item, i) => (
-                    <button
-                        key={i}
-                        onClick={() => setActiveItem(i)}
-                        className={`flex items-center gap-5 px-6 py-4 rounded-xl text-left
+                    <Link href={item.href} key={i}>
+                        <button
+                            key={i}
+                            onClick={() => setActiveItem(i)}
+                            className={`flex items-center gap-5 px-6 py-4 rounded-xl text-left
                        transition-all duration-300 hover:bg-gray-50 group
                        ${activeItem === i ? 'bg-gray-100 border-l-4 border-gray-900' : ''}`}
-                    >
-                        <div className={`text-xl transition-colors duration-300
+                        >
+                            <div className={`text-xl transition-colors duration-300
                            ${activeItem === i ? 'text-gray-900' : 'text-gray-500 group-hover:text-gray-700'}`}>
-                            {item.icon}
-                        </div>
-
-                        <span className={`font-light text-base tracking-wide transition-colors duration-300
-                             ${activeItem === i ? 'text-gray-900 font-normal' : 'text-gray-600 group-hover:text-gray-900'}`}>
-                            {item.label}
-                        </span>
-
-                        {item.count && (
-                            <div className="ml-auto px-3 py-1 rounded-full text-xs bg-gradient-to-br from-blue-800 via-blue-600 to-blue-400 text-white">
-                                {item.count}
+                                {item.icon}
                             </div>
-                        )}
-                    </button>
+
+                            <span className={`font-light text-base tracking-wide transition-colors duration-300
+                             ${activeItem === i ? 'text-gray-900 font-normal' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                                {item.label}
+                            </span>
+
+                            {item.count && (
+                                <div className="ml-auto px-3 py-1 rounded-full text-xs bg-gradient-to-br from-blue-800 via-blue-600 to-blue-400 text-white">
+                                    {item.count}
+                                </div>
+                            )}
+                        </button>
+                    </Link>
                 ))}
             </nav>
 

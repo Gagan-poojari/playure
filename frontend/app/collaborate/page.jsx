@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import CreateGameSession from '@/components/coloboration/CreateGameSession'
-import EventHeader from '@/components/coloboration/EventHeader'
+import CreateGameSession from '@/components/collaborate/CreateGameSession'
+import EventHeader from '@/components/collaborate/EventHeader'
 
 
 
